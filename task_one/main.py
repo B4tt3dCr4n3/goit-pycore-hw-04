@@ -2,7 +2,7 @@
 Task 1: Write the function that read the file and calculates the total and average salary.
 """
 
-def total_salary(path: str) -> set:
+def total_salary(path: str) -> set[float]:
     """
     This function calculates the total and average salary from a file.
 
@@ -17,7 +17,7 @@ def total_salary(path: str) -> set:
             lines = file.readlines() # Reading the file
             total_salary = 0 # Initializing the total salary
             for line in lines: # Iterating through the lines
-                salary = line.split(',')[1] # Getting the salary
+                salary = line.strip().split(',')[1] # Getting the salary
                 total_salary += float(salary) # Adding the salary to the total salary
             average_salary = total_salary / len(lines) # Calculating the average salary
         return total_salary, average_salary # Returning the total and average salary
