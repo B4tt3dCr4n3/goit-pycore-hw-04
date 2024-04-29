@@ -4,6 +4,12 @@ Task 2. Write a function that reads a file and returns its content as a list of 
 def get_cats_info(path: str) -> list[dict]:
     '''
     This function reads a file and returns its content as a list of dictionaries.
+
+    Args:
+        path (str): The path to the file.
+
+    Returns:    
+        list[dict]: The list of dictionaries with the cats information.
     '''
     try: # Check if the file exists
         with open(path, 'r', encoding='UTF-8') as file: # Open the file
